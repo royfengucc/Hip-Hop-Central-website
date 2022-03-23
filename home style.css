@@ -29,7 +29,7 @@ header.sticky{
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
     text-decoration: none;
     transition: all 0.3s ease 0s;
 }
@@ -78,21 +78,12 @@ header.sticky{
 #nav {
     text-align:center;
 }
-/* 
-* html #nav ul { 
-    display:inline;
-    }
-*+html #nav ul { 
-    display:inline;
-}
-#nav li {
-    display:inline;
-} */
+
 #nav a {
     float:left;
     display: flex;
     text-decoration:none; 
-    padding: 20px 80px; 
+    padding: 20px 100px; 
 }
 
 #nav li :hover{ 
@@ -102,9 +93,8 @@ header.sticky{
 .banner { 
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: url(drake.png);
-    background-size: cover;
+    background-color: #000;
+    
     z-index: -1;
 }
 
@@ -116,9 +106,236 @@ header.sticky #nav ul li a:hover {
     color: rgb(253, 59, 107); 
 }
 
-h1 {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 300px;
+.Intro_Textbox { 
+    font-family: 'Bebas Neue';    
+    color: #fff;     
 }
+
+.Intro_Textbox img {
+    height: 100%;
+    width: 100%;    
+}
+
+.Intro_Textbox_Text { 
+    position: absolute;
+    top: 40%;
+    padding-left: 7%;
+    line-height: 110px;
+}
+
+.Intro_Textbox_Text::after{ 
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 0.175rem;
+    left: 11%;
+    bottom: 56%;
+    background:rgb(253, 59, 107);
+}
+
+.Intro_Textbox_Text p:nth-child(1) { 
+    color: #fff;
+    font-family: "Bebas Neue";
+
+    font-size: 100px;
+    letter-spacing: 2px;
+}
+
+.Intro_Textbox_Text p:nth-child(2) {
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.Hottest_Singles { 
+    font-family: 'Bebas Neue';    
+    font-style: bold;
+    color: #fff;
+    font-size: 80px;
+    position: relative;
+    text-align: center;
+    padding: 35px;
+}
+
+
+
+.Sky { 
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.Sky img { 
+    Width: 30%
+}
+
+.Sky_Overlay { 
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 30%;
+    height: 98%;
+    background: rgba(0,0,0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.Sky_Overlay:hover .Sky > img{
+    transform: scale(0.9);
+}
+
+.Sky_Overlay:hover { 
+    opacity: 1;
+}
+
+.Sky img:hover { 
+    transform: scale(0.9);
+}
+
+
+
+.Recommended_Albums { 
+    font-family: 'Bebas Neue';    
+    font-style: bold;
+    color: #fff;
+    font-size: 80px;
+    position: relative;
+    text-align: center;
+}
+
+
+.Recommended_Albums table { 
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.Recommended_Albums td { 
+    border: 5px solid;
+    border-color: transparent;
+    outline:1px solid transparent;
+    position: relative;
+}
+
+
+.Recommended_Albums .album::after { 
+    content: "";
+    display: block;
+    margin-top: -7%;
+}
+
+.Recommended_Albums img {
+    width: 100%;
+}
+
+.Recommended_Albums .category { 
+    font-size: 50px;
+}
+
+.Recommended_Albums .category::before { 
+    content: " .";
+    font-size: 30px;
+    color: black;
+    display: block;
+}
+
+.Recommended_Albums table td p { 
+    display: block;
+    font-size: 30px;
+    position: relative;
+    
+}
+
+.Recommended_Albums img:hover { 
+    transform: scale(0.9);
+}
+
+.Recommended_Albums img {
+    transition: transform 0.3s;
+}
+
+.Recommended_Albums td {
+    position: relative;
+}
+
+.Recommended_Albums .text{
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    text-shadow: 2px 2px #ff0000;
+}
+
+.Recommended_Albums img:hover .text{ 
+    transform: scale(0.9);
+}
+
+.Recommended_Albums .text {
+    transition: transform 0.3s;
+}
+
+.flex { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.flex .child {
+    padding: 5px;
+}
+
+.flex .child img{
+    height: 400px;
+}
+
+.flex .child { 
+    position: relative;
+    align-items: center;
+}
+
+
+.flex .child .text{
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Bebas Neue';
+    color: #fff ;
+    text-shadow: 2px 2px #ff0000;
+    top: 90%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+.flex .child:hover .text{ 
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin: 0;
+    white-space: nowrap;
+    transform: translate(0px, 100px);
+}
+
+.flex .child .text{
+    transition: 0.3s;
+}
+
+
+
